@@ -83,6 +83,7 @@
 
 
                 {% for event in events %}
+
                 <section>
                     <div class="flexbox-col">
                         <div class="box" style= "background-image: url('{{ event.image_url }}; ');
@@ -102,7 +103,6 @@
                     </div>
                                 
                 </section>
-                
                 {% endfor %}
                 
 
@@ -138,21 +138,21 @@
         
           let infoWindow = new google.maps.InfoWindow();
 // =============================================================================================================================
-            const your_location = new AdvancedMarkerElement({
-                map: map,
-                position: pos,
-                title: "Your Location",
-                gmpClickable: true,
-            });
+            // const your_location = new AdvancedMarkerElement({
+            //     map: map,
+            //     position: pos,
+            //     title: "Your Location",
+            //     gmpClickable: true,
+            // });
 
-            // Add a click listener for each marker, and set up the info window.
-            your_location.addListener("click", ({ domEvent, latLng }) => {
-                const { target } = domEvent;
+            // // Add a click listener for each marker, and set up the info window.
+            // your_location.addListener("click", ({ domEvent, latLng }) => {
+            //     const { target } = domEvent;
 
-                infoWindow.close();
-                infoWindow.setContent(your_location.title);
-                infoWindow.open(your_location.map, your_location);
-            });
+            //     infoWindow.close();
+            //     infoWindow.setContent(your_location.title);
+            //     infoWindow.open(your_location.map, your_location);
+            // });
             
 // =============================================================================================================================
             let data = {{data}};
